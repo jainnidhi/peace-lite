@@ -1,0 +1,182 @@
+/*
+ * jQuery FlexSlider v2.2.0
+ * http://www.woothemes.com/flexslider/
+ *
+ * Copyright 2012 WooThemes
+ * Free to use under the GPLv2 license.
+ * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * Contributing author: Tyler Smith (@mbmufffin)
+ */
+
+ 
+/* Browser Resets */
+.flex-container a:active,
+.flexslider a:active,
+.flex-container a:focus,
+.flexslider a:focus  {outline: none;}
+.slides,
+.flex-control-nav,
+.flex-direction-nav {margin: 0; padding: 0; list-style: none !important;} 
+
+/* FlexSlider Necessary Styles
+*********************************/ 
+.flexslider {margin: 0; padding: 0;}
+.flexslider .slides > li {display: none; list-style:none; -webkit-backface-visibility: hidden;} /* Hide the slides before the JS is loaded. Avoids image jumping */
+.flexslider .slides img {width: 100%; display: block;}
+.flex-pauseplay span {text-transform: capitalize;}
+
+/* Clearfix for the .slides element */
+.slides:after {content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;} 
+html[xmlns] .slides {display: block;} 
+* html .slides {height: 1%;}
+
+/* No JavaScript Fallback */
+/* If you are not using another script, such as Modernizr, make sure you
+ * include js that eliminates this class on page load */
+.no-js .slides > li:first-child {display: block;}
+
+
+/* FlexSlider Default Theme
+*********************************/
+.flex-viewport { border-top:0 }
+.flexslider {
+	background:#fff;
+	position:relative;
+	zoom:1;
+}
+.flex-viewport {
+	max-height:2000px;
+	-webkit-transition:all 1s ease;
+	-moz-transition:all 1s ease;
+	transition:all 1s ease;
+}
+.loading .flex-viewport {max-height: 300px}
+.flexslider .slides {
+	zoom:1;
+	margin:0;
+	background:#fff
+}
+
+/* Widget Slider */
+.widget-slider {  }
+.content-area .widget-slider { width:100% }
+.flexslider {
+	position:relative;
+	width:100%
+}
+.featuredslider {
+	margin-bottom:20px;
+	overflow:hidden
+}
+.widgetslider .slides li { display:none }
+.flexslider .post-inner {
+	background:rgba(0,0,0,0.5);
+	position:absolute;
+	bottom:0;
+	left:0;
+	width:90%;
+	padding:10px 5% 30px;
+}
+.widgetslider .post-inner { padding:10px 5% }
+.flexslider .title { color:#fff }
+.slider-meta span { color:#aaa }
+.galleryslider {
+	overflow:hidden;
+	position:relative
+}
+.galleryslider ul,
+.galleryslider ul li { 	margin:0 }
+.galleryslider ul img {
+	float:left;
+	width:100%
+}
+
+/* Direction Nav */
+.flex-direction-nav {*height: 0; margin:0 !important;}
+.flexslider:hover .flex-next {opacity: 0.8; }
+.flexslider:hover .flex-prev {opacity: 0.8; }
+.flexslider:hover .flex-next:hover, .flexslider:hover .flex-prev:hover {opacity: 1;}
+.flex-direction-nav .flex-disabled {/*opacity: .3!important; filter:alpha(opacity=30);*/ cursor: default; display:none } 
+.flex-direction-nav a {
+	background:rgba(0,0,0,0.5);
+	color:#fff !important;
+	display:inline-block;
+	font-size:32px;
+	margin:0;
+	padding:3px 0;
+	position:absolute;
+	top:43%;
+	text-align: center;
+	width:38px;
+	z-index:10;
+    -webkit-transition: all 0.25s linear;
+    -moz-transition: all 0.25s linear;
+    transition: all 0.25s linear;
+	-webkit-border-radius:50%;
+	 -moz-border-radius:50%;
+		  border-radius:50%;
+}
+.flex-direction-nav a:hover {
+	background:#000;
+	color:#fff;
+}
+.flex-direction-nav .flex-prev { left:-60px }
+.flex-direction-nav .flex-next { right:-60px }
+.flexslider:hover .flex-direction-nav .flex-next { right:10px }
+.flexslider:hover .flex-direction-nav .flex-prev { left:10px }
+
+
+/* Control Nav */
+.flex-control-nav {
+	position:absolute;
+	z-index:10
+}
+.flex-control-nav a {
+	background:rgba(117,117,117,1);
+    cursor: pointer;
+    display: block;
+    height: 10px;
+	margin-bottom:10px;
+    text-indent: -9999px;
+    
+}
+.flex-control-nav .flex-active { background:transparent; }
+.flexslider .flex-control-nav  { 
+	left:0;
+	bottom:10px;
+	text-align:center;
+	width:100%
+}
+.featuredslider .flex-control-nav { bottom:0 }
+.flex-control-nav li {
+	display:inline-block;
+	margin:0
+}
+.flexslider .flex-control-nav a {
+	background:#fff;
+	margin:0 2px;
+	height:10px;
+	width:10px;
+	-webkit-border-radius:50%;
+	 -moz-border-radius:50%;
+		  border-radius:50%;
+}
+.galleryslider .flex-control-nav .flex-active { background-color:#FF8800 }
+
+/* Header Slider */
+.header-slider  .flex-control-nav {
+	right:10%;
+	top:40px;
+}
+.boxed-layout .header-slider .flex-control-nav { right:2% }
+.header-slider .flex-control-nav li { display:block }
+.header-slider .flex-control-nav a {
+	border:2px solid rgba(117,117,117,1);
+	width:8px;
+	height:8px;
+	-webkit-border-radius:50%;
+	 -moz-border-radius:50%;
+		  border-radius:50%;
+}
+.header-slider  .flex-control-nav .flex-active { border:2px solid #fff }
