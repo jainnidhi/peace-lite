@@ -4,7 +4,7 @@ Theme URI: http://ideaboxthemes.com/themes/peace-wordpress-theme/
 Author: IdeaBox Themes
 Author URI: http://ideaboxthemes.com/
 Description: Peace is a beautiful, easy to use, mobile responsive, one page, multipurpose theme. You can either use it as a one page theme or a standard theme. It comes with unique one click installation and live cusotmization features which makes it easy to use and setup for all kind of users. Multiple color schemes and beautiful typography make it a perfect fit for all kind of websites. 
-Version: 1.0.1
+Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: black, gray, dark, blue, red, pink, orange, green, brown, light, one-column, two-columns, right-sidebar, fluid-layout, responsive-layout, custom-background, custom-header, custom-menu, editor-style, featured-image-header, featured-images, full-width-template, microformats, post-formats, sticky-post, theme-options, threaded-comments, translation-ready
@@ -602,8 +602,10 @@ select {
 
 .top-bar-nav #top-navigation li a{
     color:#fff;
-    padding:12px;
+    padding:13px;
     display:block;
+    font-size:14px;
+    text-transform:none;
 }
 
 .top-bar-nav #top-navigation li a:hover{
@@ -1469,9 +1471,12 @@ article.sticky .featured-post {
    ========================================================================== */
 
 #comments {
-    padding: 20px 0;
-    border:1px solid #ddd;
+    padding: 0px 30px;
+    border-left:1px solid #ddd;
+    border-right:1px solid #ddd;
+    border-bottom:1px solid #ddd;
     background:#fff;
+    border-top:0;
 }
 .comments-title {
     margin-bottom: 20px;
@@ -1479,6 +1484,8 @@ article.sticky .featured-post {
     line-height: 1.5;
     font-weight: 700;
     text-transform: uppercase;
+    margin-top:0;
+    padding-top:15px;
 }
 
 .comments-area article {
@@ -1605,7 +1612,7 @@ a.comment-reply-link:hover {
 #respond {
     margin-top: 48px;
     margin: 0 -30px 0 -30px;
-    border-top:1px solid #ddd;
+    
 }
 
 .page #respond{
@@ -2039,6 +2046,9 @@ div.gform_wrapper .ginput_complex label {
     line-height: 2;
     overflow: hidden;
     padding: 30px;
+    border-bottom:1px solid #ddd;
+    border-left:1px solid #ddd;
+    border-right:1px solid #ddd;
 }
 
 .blog .site-content nav,
@@ -2150,6 +2160,12 @@ li span.dots {
     max-width:1140px;
     margin: 0 auto;
     text-transform:uppercase;
+}
+
+
+.main-navigation .fa{
+    padding-right:7px;
+    font-size:16px;
 }
 
 .main-navigation h1 {

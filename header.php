@@ -39,6 +39,11 @@ global $edd_options;
 
 
             <?php wp_head(); ?>
+            <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+            <!--[if lt IE 9]>
+              <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+              <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+            <![endif]-->
         </head>
 
         <body <?php body_class(); ?>>
@@ -121,7 +126,8 @@ global $edd_options;
                     <div class="nav-container">
                         <nav id="site-navigation" class="main-navigation clearfix" role="navigation">
                                 
-                              <?php  wp_nav_menu(array('theme_location' => 'primary', 'menu_class' => 'primary-menu', 'container_class' => 'menu')); ?>
+                              <?php $walker = new Menu_With_Description;
+                              wp_nav_menu(array('theme_location' => 'primary', 'menu_class' => 'primary-menu', 'container_class' => 'menu', 'walker' => $walker)); ?>
                                 
                                 <div id="mobile-menu"></div>
                             </nav> <!-- /.site-navigation.main-navigation -->

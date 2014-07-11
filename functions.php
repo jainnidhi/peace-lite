@@ -105,8 +105,6 @@ function peace_scripts_styles() {
 	// We're using the awesome Font Awesome icon font. http://fortawesome.github.io/Font-Awesome
 	wp_enqueue_style( 'fontawesome', trailingslashit( get_template_directory_uri() ) . 'assets/css/font-awesome.min.css' , array(), '4.0.3', 'all' );
         
-        wp_enqueue_style( 'flexslider', trailingslashit( get_template_directory_uri() ) . 'assets/css/flexslider.css' , array(), '1.0', 'all' );
-        
 	$fonts_url = 'http://fonts.googleapis.com/css?family=Arvo:300,400,700|Lato:300,400,700';
 	if ( !empty( $fonts_url ) ) {
 		wp_enqueue_style( 'peace-fonts', esc_url_raw( $fonts_url ), array(), null );
@@ -123,7 +121,7 @@ function peace_scripts_styles() {
 	// Load Modernizr at the top of the document, which enables HTML5 elements and feature detects
 	wp_enqueue_script( 'modernizr', trailingslashit( get_template_directory_uri() ) . 'assets/js/modernizr-2.7.1-min.js', array(), '2.7.1', false );
         wp_enqueue_script('jquery'); 
-        wp_enqueue_script('peace-slider', get_template_directory_uri() . '/assets/js/jquery.flexslider-min.js', array('jquery'));
+       
 	wp_enqueue_script( 'peace-slicknav', get_template_directory_uri() . '/assets/js/jquery.slicknav.min.js' );
         wp_enqueue_script('peace-custom-scripts', get_template_directory_uri() . '/assets/js/custom-scripts.js', array(), '1.0', 'all', false);
         
@@ -243,7 +241,7 @@ add_filter( 'the_content_more_link', 'peace_remove_more_jump_link' );
  * @return string The 'Continue reading' link
  */
 function peace_continue_reading_link() {
-	return '&hellip;<p><a class="more-link" href="'. esc_url( get_permalink() ) . '" title="' . esc_html__( 'Continue reading', 'peace' ) . ' &lsquo;' . get_the_title() . '&rsquo;">' . wp_kses( __( 'Read More', 'peace' ), array( 'span' => array( 
+	return '&hellip;<p><a class="more-link" href="'. esc_url( get_permalink() ) . '" title="' . esc_html__( 'Read More', 'peace' ) . ' &lsquo;' . get_the_title() . '&rsquo;">' . wp_kses( __( 'Read More', 'peace' ), array( 'span' => array( 
 			'class' => array() ) ) ) . '</a></p>';
 }
 
@@ -346,3 +344,33 @@ require( get_template_directory() . '/inc/theme-extras.php' );
  * Add support for a custom header image.
  */
 require( get_template_directory() . '/inc/custom-header.php' );
+
+class Menu_With_Description extends Walker_Nav_Menu {
+	function start_el(&$output, $item, $depth, $args) {
+		global $wp_query;
+		$indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
+		
+		$class_names = $value = '';
+ 
+		$classes = empty( $item->classes ) ? array() : (array) $item->classes;
+ 
+		$class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item ) );
+		$class_names = ' class="' . esc_attr( $class_names ) . '"';
+ 
+		$output .= $indent . '<li id="menu-item-'. $item->ID . '"' . $value . $class_names .'>';
+ 
+		$attributes = ! empty( $item->attr_title ) ? ' title="' . esc_attr( $item->attr_title ) .'"' : '';
+		$attributes .= ! empty( $item->target ) ? ' target="' . esc_attr( $item->target ) .'"' : '';
+		$attributes .= ! empty( $item->xfn ) ? ' rel="' . esc_attr( $item->xfn ) .'"' : '';
+		$attributes .= ! empty( $item->url ) ? ' href="' . esc_attr( $item->url ) .'"' : '';
+               
+		$item_output = $args->before;
+		$item_output .= '<a'. $attributes .'>';
+                if($item->description != '') { $item_output .= '<i class="fa '. $item->description . '"></i>'; }
+		$item_output .= $args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
+		$item_output .= '</a>';
+		$item_output .= $args->after;
+                
+		$output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
+	}
+}
