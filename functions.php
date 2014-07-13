@@ -241,7 +241,7 @@ add_filter( 'the_content_more_link', 'peace_remove_more_jump_link' );
  * @return string The 'Continue reading' link
  */
 function peace_continue_reading_link() {
-	return '&hellip;<p><a class="more-link" href="'. esc_url( get_permalink() ) . '" title="' . esc_html__( 'Read More', 'peace' ) . ' &lsquo;' . get_the_title() . '&rsquo;">' . wp_kses( __( 'Read More', 'peace' ), array( 'span' => array( 
+	return '&hellip;<p><a class="more-link" href="'. esc_url( get_permalink() ) . '" title="' . esc_html__( 'Read More', 'peace' ) . ' &lsquo;' . esc_attr(get_the_title()) . '&rsquo;">' . wp_kses( __( 'Read More', 'peace' ), array( 'span' => array( 
 			'class' => array() ) ) ) . '</a></p>';
 }
 
@@ -260,24 +260,6 @@ function peace_auto_excerpt_more( $more ) {
 add_filter( 'excerpt_more', 'peace_auto_excerpt_more' );
 
 
-
-/*
- * 
- * Set excerpt length for post on front page
- * and post excerpts on rest of the pages.
- * 
- */
-function peace_excerpt_length($length) {
-    global $post;
-    if ($post->post_type == 'post') {
-        return 20;
-    }
-   
-    else {
-        return 50;
-    }
-}
-add_filter('excerpt_length', 'peace_excerpt_length');
 
 
 /**
@@ -346,7 +328,7 @@ require( get_template_directory() . '/inc/theme-extras.php' );
 require( get_template_directory() . '/inc/custom-header.php' );
 
 class Menu_With_Description extends Walker_Nav_Menu {
-	function start_el(&$output, $item, $depth, $args) {
+	function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0) {
 		global $wp_query;
 		$indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
 		
