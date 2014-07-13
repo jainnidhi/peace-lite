@@ -526,3 +526,14 @@ function peace_extract_from_string($start, $end, $tring) {
 	return substr($tring, strlen($start), -strlen($trimmed));
 }
 endif;
+
+
+function peace_admin_notice(){
+    global $pagenow;
+    if ( $pagenow == 'themes.php' ) { ?>
+          <div class="updated">
+              <p>This theme comes with <a href="<?php echo admin_url('customize.php'); ?>">Live Theme Customizer</a> to configure settings and setup home page content. <br/> You can upgrade to <a href="http://ideaboxthemes.com/themes/peace-wordpress-theme/">Pro version</a> for more features like multiple color schemes, featured post slider, support and upgrades.</p>
+         </div>
+   <?php  }
+}
+add_action('admin_notices', 'peace_admin_notice');
