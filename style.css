@@ -89,7 +89,7 @@ td { vertical-align: top; }
 body { 
     margin: 0 auto;
     padding: 0;
-    font: 15px/1.5 'Lato', sans-serif;
+    font: 16px/1.5 'Lato', sans-serif;
     font-style: normal;
     font-weight: 300;
     color: #333;
@@ -216,14 +216,6 @@ ol, ul {
 p, ol, ul, dl, address {
     margin: 0 0 14px 0;
     line-height: 1.7;
-}
-
-p{
-    line-height: 26px;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 16px;
-    margin-bottom:20px;
 }
 
 ul ul, ul ol, ol ol, ol ul {
@@ -427,8 +419,6 @@ sub {
 .wp-caption .wp-caption-text,
 .gallery-caption,
 .entry-caption {
-    font-style: italic;
-    font-weight: 400;
     font-size: 14px;
     line-height: 1.5;
     color: #777;
@@ -1058,7 +1048,6 @@ article.sticky .featured-post {
 .entry-header address,
 .comment-content address {
     font-style: normal; 
-    font-weight: 400;
     display: block;
 }
 
@@ -1103,7 +1092,6 @@ article.sticky .featured-post {
     text-transform: uppercase;
     display:inline-block;
     font-size: 12px;
-    font-weight: 400;
     line-height: 19px;
 }
 
@@ -1724,7 +1712,7 @@ form label.error {
 .gform_footer top_label input[type="submit"]
 {
     background:#fff;
-    color:333;
+    color:#333;
     border:1px solid #ccc;
 }
 
@@ -1757,7 +1745,8 @@ div.gform_wrapper .ginput_complex label {
     width: 90%;
     max-width: 1140px;
     margin: 0 auto;
-    padding: 30px 0;
+    padding: 50px 0 30px;
+    text-align: center;
 }
 
 .site-footer input{
@@ -1784,6 +1773,7 @@ div.gform_wrapper .ginput_complex label {
 
 .site-footer .widget-title { 
     margin-top: 0;
+    margin-bottom: 20px;
     color: #111;
     font-size: 14px;
     line-height: 22px;
@@ -1793,8 +1783,8 @@ div.gform_wrapper .ginput_complex label {
 }
 
 .site-footer .widget li {
-    padding-bottom: 10px; 
-    margin-bottom: 10px;
+    padding-bottom: 5px; 
+    margin-bottom: 5px;
 }
 .site-footer a { 
     color: #111;
@@ -2173,14 +2163,6 @@ li span.dots {
     line-height: 1.25;
 }
 
-.nav-menu {
-    font-family: "Montserrat", Helvetica, Arial, sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 1px; 
-}
 
 .main-navigation ul {
     list-style: none;
