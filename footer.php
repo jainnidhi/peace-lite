@@ -54,7 +54,7 @@
                 </p>
             </div>
         <?php } else { ?>   
-                    <div class="smallprint"><?php echo esc_html(get_theme_mod('peace_footer_footer_text')); ?></div>
+            <div class="smallprint"><p><?php echo esc_html(get_theme_mod('peace_footer_footer_text')); ?></p></div>
         <?php } ?> 
                     <div class="footer-extras">
                          <p>

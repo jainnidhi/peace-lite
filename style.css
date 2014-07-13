@@ -1825,29 +1825,32 @@ div.gform_wrapper .ginput_complex label {
     margin-bottom:0;
 }
 
-.smallprint a { 
+.footer-wrap a { 
     color: #fff;
 }
 
-.smallprint a:visited { 
+.footer-wrap a:visited { 
     color: #fff;
 }
 
-.smallprint a:hover { 
+.footer-wrap a:hover { 
     color: #eee;
 }
 
 .footer-wrap{
-    background: rgba(0,0,0,0.5);
+    background: #009CEE;
 }
 
 .footer-extras{
     width:50%;
     float:right;
 }
-.footer-wrap .social-links{
-    float:right;
-    margin-top:15px;
+
+.footer-extras p {
+    text-align: right; 
+    font-size: 14px;
+    padding: 20px 0;
+    margin-bottom:0;
 }
 /* ==========================================================================
    Sidebar
