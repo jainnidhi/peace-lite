@@ -50,15 +50,19 @@
         <?php if (get_theme_mod('peace_footer_footer_text') == '') { ?>
             <div class="smallprint">
                 <p>
-                    <a href="<?php $peace_theme = wp_get_theme(); echo $peace_theme->get( 'ThemeURI' ); ?>">
-                        <?php _e('Peace WordPress theme by IdeaBox', 'peace'); ?>
-                    </a>
+                    <?php esc_html_e('&copy; Copyright &middot; ','peace'); ?> <a href="<?php echo home_url(); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a>
                 </p>
             </div>
         <?php } else { ?>   
-                    <div class="smallprint"><?php echo wpautop(esc_html(get_theme_mod('peace_footer_footer_text'))); ?></div>
+                    <div class="smallprint"><?php echo esc_html(get_theme_mod('peace_footer_footer_text')); ?></div>
         <?php } ?> 
-                    
+                    <div class="footer-extras">
+                         <p>
+                   <a href="<?php $my_theme = wp_get_theme(); echo $my_theme->get( 'AuthorURI' ); ?>">
+                            <?php _e('Peace WordPress theme by IdeaBox','peace'); ?>
+                    </a>
+                </p>
+                    </div> 
         </div>
     </div> <!-- /.footer-wrap -->
 </div> <!-- /.footercontainer -->
