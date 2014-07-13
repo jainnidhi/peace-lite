@@ -19,7 +19,7 @@ get_header(); ?>
 			<?php if ( have_posts() ) : ?>
 
 				<?php while ( have_posts() ) : the_post(); ?>
-					<?php get_template_part( 'content', 'page' ); ?>
+					<?php get_template_part( 'content/content', 'page' ); ?>
 					<?php comments_template( '', true ); ?>
 				<?php endwhile; // end of the loop. ?>
 
