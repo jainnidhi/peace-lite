@@ -2043,7 +2043,7 @@ div.gform_wrapper .ginput_complex label {
 
 .blog .site-content nav,
 .archive .site-content nav{
-    border: 0;
+    border: none;
     padding:30px 0;
 }
 
