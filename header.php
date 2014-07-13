@@ -1,5 +1,4 @@
 <?php
-global $edd_options;
 
 /**
  * The Header for our theme.
