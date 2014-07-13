@@ -309,13 +309,48 @@ function peace_custom_favicon(){
 add_action('wp_head','peace_custom_favicon');
 
 
-/* Add theme extras */
-require( get_template_directory() . '/inc/theme-extras.php' );
-
 /**
- * Add support for a custom header image.
+ * Menu fallback. Link to the menu editor if that is useful.
+ *
+ * @param  array $args
+ * @return string
  */
-require( get_template_directory() . '/inc/custom-header.php' );
+function peace_link_to_menu_editor( $args )
+{
+    if ( ! current_user_can( 'manage_options' ) )
+    {
+        return;
+    }
+
+    // see wp-includes/nav-menu-template.php for available arguments
+    extract( $args );
+
+    $link = $link_before
+        . '<a href="' .admin_url( 'nav-menus.php' ) . '">' . $before . 'Add a menu' . $after . '</a>'
+        . $link_after;
+
+    // We have a list
+    if ( FALSE !== stripos( $items_wrap, '<ul' )
+        or FALSE !== stripos( $items_wrap, '<ol' )
+    )
+    {
+        $link = "<li>$link</li>";
+    }
+
+    $output = sprintf( $items_wrap, $menu_id, $menu_class, $link );
+    if ( ! empty ( $container ) )
+    {
+        $output  = "<$container class='$container_class' id='$container_id'>$output</$container>";
+    }
+
+    if ( $echo )
+    {
+        echo $output;
+    }
+
+    return $output;
+}
+
 
 class Menu_With_Description extends Walker_Nav_Menu {
 	function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0) {
@@ -346,3 +381,12 @@ class Menu_With_Description extends Walker_Nav_Menu {
 		$output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
 	}
 }
+
+
+/* Add theme extras */
+require( get_template_directory() . '/inc/theme-extras.php' );
+
+/**
+ * Add support for a custom header image.
+ */
+require( get_template_directory() . '/inc/custom-header.php' );

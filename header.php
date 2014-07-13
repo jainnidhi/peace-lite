@@ -57,7 +57,16 @@ global $edd_options;
                         <div class="col grid_6_of_12 top-bar-nav">
                            <nav id="top-navigation" class="main-navigation clearfix" role="navigation">
                                 
-                              <?php  wp_nav_menu(array('theme_location' => 'above-header', 'menu_class' => 'above-header-menu clearfix', 'container_class' => 'header-menu')); ?>
+                               <?php
+                                    $header_walker = new Peace_Menu_With_Description;
+                                    wp_nav_menu(array(
+                                        'theme_location' => 'above-header',
+                                        'menu_class' => 'above-header-menu clearfix',
+                                        'container_class' => 'header-menu',
+                                        'walker' => $header_walker,
+                                        'fallback_cb' => 'peace_link_to_menu_editor'
+                                    ));
+                                    ?>
                               <div id="mobile-top-menu"></div> 
                             </nav> <!-- /.site-navigation.main-navigation -->
                         </div>
@@ -126,8 +135,21 @@ global $edd_options;
                     <div class="nav-container">
                         <nav id="site-navigation" class="main-navigation clearfix" role="navigation">
                                 
-                              <?php $walker = new Menu_With_Description;
-                              wp_nav_menu(array('theme_location' => 'primary', 'menu_class' => 'primary-menu', 'container_class' => 'menu', 'walker' => $walker)); ?>
+                                 
+                              <?php 
+                              
+                                $walker = new Peace_Menu_With_Description;
+                            
+                                    wp_nav_menu(array(
+                                        'theme_location' => 'primary',
+                                        'menu_class' => 'primary-menu',
+                                        'container_class' => 'menu',
+                                        'walker' => $walker,
+                                        'fallback_cb' => 'peace_link_to_menu_editor'
+                                    ));
+                              
+                                ?>
+                            
                                 
                                 <div id="mobile-menu"></div>
                             </nav> <!-- /.site-navigation.main-navigation -->
