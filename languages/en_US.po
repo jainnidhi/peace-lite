@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Peace\n"
-"POT-Creation-Date: 2014-05-25 17:04+0530\n"
-"PO-Revision-Date: 2014-05-25 17:04+0530\n"
+"POT-Creation-Date: 2014-07-13 12:26+0530\n"
+"PO-Revision-Date: 2014-07-13 12:26+0530\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_US\n"
@@ -71,476 +71,160 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
-#: content-aside.php:16 content-audio.php:24 content-chat.php:16
-#: content-gallery.php:23 content-image.php:16 content-link.php:16
-#: content-quote.php:17 content-status.php:16 content-video.php:23
-#: content.php:36 functions.php:283
-msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
-msgstr ""
-
-#: content-aside.php:21 content-audio.php:29 content-chat.php:21
-#: content-gallery.php:28 content-image.php:21 content-link.php:21
-#: content-postarchives.php:33 content-quote.php:24 content-status.php:20
-#: content-video.php:28 content.php:40
-msgid "Pages:"
-msgstr ""
-
-#: content-aside.php:33 content-audio.php:42 content-chat.php:33
-#: content-gallery.php:40 content-image.php:33 content-link.php:33
-#: content-postarchives.php:36 content-quote.php:36 content-status.php:32
-#: content-video.php:40 content.php:53 inc/theme-extras.php:154
-msgid "Edit"
-msgstr ""
-
-#: content-audio.php:17 content-gallery.php:17 content-video.php:17
-#: content.php:18 content.php:23
+#: content/content-aside.php:21 content/content-audio.php:21
+#: content/content-chat.php:21 content/content-image.php:21
+#: content/content-link.php:31 content/content-quote.php:21
+#: content/content-status.php:21 content/content-video.php:21
 #, php-format
 msgid "Permalink to %s"
 msgstr ""
 
-#: content-frontposts.php:32 header.php:115
-msgid "Recent Blogs"
+#: content/content-aside.php:29 content/content-audio.php:29
+#: content/content-chat.php:29 content/content-gallery.php:29
+#: content/content-image.php:29 content/content-link.php:39
+#: content/content-quote.php:29 content/content-status.php:29
+#: content/content-video.php:29 content/content.php:29
+msgid " &middot; "
 msgstr ""
 
-#: content-frontposts.php:74
-msgid "Not Found"
+#: content/content-link.php:55
+msgid "External link"
 msgstr ""
 
-#: content-frontposts.php:75
-msgid "Sorry, but you are looking for something that is not here"
-msgstr ""
-
-#: content-postarchives.php:19
+#: content/content-postarchives.php:19
 msgid "Archives by Category"
 msgstr ""
 
-#: content-postarchives.php:28
+#: content/content-postarchives.php:28
 msgid "Archives by Month"
+msgstr ""
+
+#: content/content-postarchives.php:33
+msgid "Pages:"
+msgstr ""
+
+#: content/content-postarchives.php:36
+msgid "Edit"
 msgstr ""
 
 #: footer.php:54
 msgid "Peace WordPress theme by IdeaBox"
 msgstr ""
 
-#: front-page.php:34 front-page.php:44 front-page.php:54
-msgid "Showcase Your Restaurant Services"
-msgstr ""
-
-#: front-page.php:35 front-page.php:45 front-page.php:55 front-page.php:336
-#: front-page.php:351 front-page.php:366
-msgid ""
-"Showcase your multiple services and let users understand about your business."
-msgstr ""
-
-#: front-page.php:164
-msgid "Build Restaurant Website With Peace Multipurpose Theme"
-msgstr ""
-
-#: front-page.php:170
-msgid ""
-"Creating your Restaurant & Food based website with Peace is completely "
-"easy.\n"
-"                              You just need to perform few tweaks in the "
-"theme option panel and your website will be ready to use.\n"
-"                              Showcase all important features of your "
-"website on homepage."
-msgstr ""
-
-#: front-page.php:181 header.php:112
-msgid "Theme Features"
-msgstr ""
-
-#: front-page.php:196
-msgid "Our Products"
-msgstr ""
-
-#: front-page.php:202
-msgid ""
-"Showcase your best quality products on home page to grab visitor&rsquo;s "
-"attention."
-msgstr ""
-
-#: front-page.php:208 front-page.php:233 front-page.php:259 front-page.php:284
-#: front-page.php:308
-msgid "Read More"
-msgstr ""
-
-#: front-page.php:221 front-page.php:272
-msgid "Our Services"
-msgstr ""
-
-#: front-page.php:227
-msgid ""
-"Show your multiple services that will explore your website among the "
-"audience."
-msgstr ""
-
-#: front-page.php:247
-msgid "Our Clients"
-msgstr ""
-
-#: front-page.php:253 front-page.php:278
-msgid ""
-"Show testimonials of your clients that will build the trust among the "
-"audience."
-msgstr ""
-
-#: front-page.php:301
-msgid "We have really amazing products that you would be amazed to see."
-msgstr ""
-
-#: front-page.php:318
-msgid "Our Clients Feedback"
-msgstr ""
-
-#: front-page.php:378 front-page.php:390 front-page.php:405 header.php:122
-msgid "Contact"
-msgstr ""
-
-#: front-page.php:396
-msgid ""
-"You can add a contact form here using your favorite plugin. Simply add the "
-"shortcode for the form from Theme Customizer and it will be displayed here."
-msgstr ""
-
-#: front-page.php:411
-msgid ""
-"205, Gitanjali Mansion,\n"
-"                                                          Above ICICI Bank, "
-"Sector 11\n"
-"                                                          Udaipur, "
-"Rajasthan, India."
-msgstr ""
-
-#: front-page.php:418
-msgid "hello@ideaboxcreations.com"
-msgstr ""
-
-#: front-page.php:423
-msgid "0294-678456"
-msgstr ""
-
-#: functions.php:80
+#: functions.php:63
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:186
+#: functions.php:64
+msgid "Above Header"
+msgstr ""
+
+#: functions.php:137
 msgid "Main Sidebar"
 msgstr ""
 
-#: functions.php:188
+#: functions.php:139
 msgid ""
 "Appears in the sidebar on posts and pages except the optional Front Page "
 "template, which has its own widgets"
 msgstr ""
 
-#: functions.php:196
+#: functions.php:147
 msgid "Footer #1"
 msgstr ""
 
-#: functions.php:198 functions.php:208 functions.php:218 functions.php:228
+#: functions.php:149 functions.php:159 functions.php:169 functions.php:179
 msgid "Appears in the footer sidebar"
 msgstr ""
 
-#: functions.php:206
+#: functions.php:157
 msgid "Footer #2"
 msgstr ""
 
-#: functions.php:216
+#: functions.php:167
 msgid "Footer #3"
 msgstr ""
 
-#: functions.php:226
+#: functions.php:177
 msgid "Footer #4"
 msgstr ""
 
-#: functions.php:283
-msgid "Continue reading"
+#: functions.php:234
+msgid "Read More"
 msgstr ""
 
-#: header.php:48
+#: header.php:53
 msgid "Skip to main content"
 msgstr ""
 
-#: header.php:55
-msgid "Call us on  24x7: 800-555-0101"
+#: inc/customizer.php:20
+msgid "Background Settings"
 msgstr ""
 
-#: header.php:118
-msgid "Client Feedbacks"
+#: inc/customizer.php:21
+msgid ""
+"Please note that background color and image settings work only for Boxed "
+"Layout"
 msgstr ""
 
-#: inc/customizer.php:53
+#: inc/customizer.php:59
 msgid "Select"
 msgstr ""
 
-#: inc/customizer.php:71
-msgid "Color Scheme"
-msgstr ""
-
-#: inc/customizer.php:88
-msgid "Light"
-msgstr ""
-
-#: inc/customizer.php:89
-msgid "Dark"
-msgstr ""
-
-#: inc/customizer.php:108
-msgid "Blue"
-msgstr ""
-
-#: inc/customizer.php:109
-msgid "Red"
-msgstr ""
-
-#: inc/customizer.php:110
-msgid "Green"
-msgstr ""
-
-#: inc/customizer.php:111
-msgid "Gray"
-msgstr ""
-
-#: inc/customizer.php:112
-msgid "Purple"
-msgstr ""
-
-#: inc/customizer.php:113
-msgid "Orange"
-msgstr ""
-
-#: inc/customizer.php:114
-msgid "Brown"
-msgstr ""
-
-#: inc/customizer.php:115
-msgid "Pink"
-msgstr ""
-
-#: inc/customizer.php:123
+#: inc/customizer.php:76
 msgid "Custom Favicon"
 msgstr ""
 
-#: inc/customizer.php:143 inc/customizer.php:153
+#: inc/customizer.php:96 inc/customizer.php:105
 msgid "Tracking Code"
 msgstr ""
 
-#: inc/customizer.php:161
-msgid "Header Contact"
-msgstr ""
-
-#: inc/customizer.php:171
-msgid "Contact Detail"
-msgstr ""
-
-#: inc/customizer.php:181
+#: inc/customizer.php:114
 msgid "Social Icons"
 msgstr ""
 
-#: inc/customizer.php:192
+#: inc/customizer.php:125
 msgid "Facebook URL"
 msgstr ""
 
-#: inc/customizer.php:206
+#: inc/customizer.php:138
 msgid "Twitter URL"
 msgstr ""
 
-#: inc/customizer.php:220
+#: inc/customizer.php:151
 msgid "Google Plus URL"
 msgstr ""
 
-#: inc/customizer.php:234
+#: inc/customizer.php:164
 msgid "Pinterest URL"
 msgstr ""
 
-#: inc/customizer.php:248
+#: inc/customizer.php:177
 msgid "Github URL"
 msgstr ""
 
-#: inc/customizer.php:262
+#: inc/customizer.php:190
 msgid "Youtube URL"
 msgstr ""
 
-#: inc/customizer.php:271
-msgid "Home Slider"
+#: inc/customizer.php:202
+msgid "Dribble URL"
 msgstr ""
 
-#: inc/customizer.php:298
-msgid "Slider One Title"
+#: inc/customizer.php:214
+msgid "Tumblr URL"
 msgstr ""
 
-#: inc/customizer.php:311
-msgid "Slider One URL"
+#: inc/customizer.php:226
+msgid "Flickr URL"
 msgstr ""
 
-#: inc/customizer.php:324 inc/customizer.php:379 inc/customizer.php:435
-#: inc/customizer.php:489 inc/customizer.php:543 inc/customizer.php:576
-#: inc/customizer.php:659 inc/customizer.php:735 inc/customizer.php:813
-#: inc/customizer.php:890 inc/customizer.php:1105 inc/customizer.php:1133
-#: inc/customizer.php:1160
-msgid "Description"
+#: inc/customizer.php:238
+msgid "Vimeo URL"
 msgstr ""
 
-#: inc/customizer.php:353
-msgid "Slider Two Title"
-msgstr ""
-
-#: inc/customizer.php:366
-msgid "Slider Two URL"
-msgstr ""
-
-#: inc/customizer.php:409
-msgid "Slider Three Title"
-msgstr ""
-
-#: inc/customizer.php:422
-msgid "Slider Three URL"
-msgstr ""
-
-#: inc/customizer.php:463
-msgid "Slider Four Title"
-msgstr ""
-
-#: inc/customizer.php:476
-msgid "Slider Four URL"
-msgstr ""
-
-#: inc/customizer.php:517
-msgid "Slider Five Title"
-msgstr ""
-
-#: inc/customizer.php:530
-msgid "Slider Five URL"
-msgstr ""
-
-#: inc/customizer.php:552
-msgid "Home Tagline"
-msgstr ""
-
-#: inc/customizer.php:564
-msgid "Tagline"
-msgstr ""
-
-#: inc/customizer.php:585
-msgid "Home Featured Title"
-msgstr ""
-
-#: inc/customizer.php:596 inc/customizer.php:940 inc/customizer.php:1055
-#: inc/customizer.php:1240
-msgid "Section Title"
-msgstr ""
-
-#: inc/customizer.php:610 inc/customizer.php:954 inc/customizer.php:1069
-#: inc/customizer.php:1254
-msgid "Menu Title"
-msgstr ""
-
-#: inc/customizer.php:619
-msgid "Home Featured #1"
-msgstr ""
-
-#: inc/customizer.php:646 inc/customizer.php:722 inc/customizer.php:800
-#: inc/customizer.php:877 inc/customizer.php:1182 inc/customizer.php:1274
-msgid "Title"
-msgstr ""
-
-#: inc/customizer.php:672 inc/customizer.php:748 inc/customizer.php:826
-#: inc/customizer.php:903 inc/customizer.php:1021
-msgid "Link Text"
-msgstr ""
-
-#: inc/customizer.php:686 inc/customizer.php:762 inc/customizer.php:840
-#: inc/customizer.php:917 inc/customizer.php:1035
-msgid "Link URL"
-msgstr ""
-
-#: inc/customizer.php:695
-msgid "Home Featured #2"
-msgstr ""
-
-#: inc/customizer.php:773
-msgid "Home Featured #3"
-msgstr ""
-
-#: inc/customizer.php:850
-msgid "Home Featured #4"
-msgstr ""
-
-#: inc/customizer.php:929
-msgid "Featured Posts"
-msgstr ""
-
-#: inc/customizer.php:930
-msgid "Settings for displaying featured posts on Front Page"
-msgstr ""
-
-#: inc/customizer.php:966
-msgid "Show featured posts on Front Page"
-msgstr ""
-
-#: inc/customizer.php:979
-msgid "Number of posts to display"
-msgstr ""
-
-#: inc/customizer.php:987
-msgid "Post Category"
-msgstr ""
-
-#: inc/customizer.php:997
-msgid "Home CTA"
-msgstr ""
-
-#: inc/customizer.php:1007
-msgid "CTA Text"
-msgstr ""
-
-#: inc/customizer.php:1044
-msgid "Testimonial Title"
-msgstr ""
-
-#: inc/customizer.php:1079
-msgid "Testimonial Slider"
-msgstr ""
-
-#: inc/customizer.php:1170
-msgid "Contact Details"
-msgstr ""
-
-#: inc/customizer.php:1195
-msgid "Email"
-msgstr ""
-
-#: inc/customizer.php:1208
-msgid "Phone"
-msgstr ""
-
-#: inc/customizer.php:1221
-msgid "Address"
-msgstr ""
-
-#: inc/customizer.php:1229
-msgid "Home Contact Title"
-msgstr ""
-
-#: inc/customizer.php:1264
-msgid "Contact Form"
-msgstr ""
-
-#: inc/customizer.php:1287
-msgid "Contact Form Short Code"
-msgstr ""
-
-#: inc/customizer.php:1296
-msgid "Home Map"
-msgstr ""
-
-#: inc/customizer.php:1307
-msgid "Map Code"
-msgstr ""
-
-#: inc/customizer.php:1356
-msgid "Disable one page navigation"
+#: inc/customizer.php:250
+msgid "Linkedin URL"
 msgstr ""
 
 #: inc/theme-extras.php:40
@@ -605,7 +289,7 @@ msgstr ""
 msgid "View all posts by %s"
 msgstr ""
 
-#: inc/theme-extras.php:229 inc/theme-extras.php:265
+#: inc/theme-extras.php:229 inc/theme-extras.php:297
 msgid " "
 msgstr ""
 
@@ -631,39 +315,9 @@ msgid ""
 "span>%4$s</div>"
 msgstr ""
 
-#: inc/theme-extras.php:270
+#: inc/theme-extras.php:302
 #, php-format
 msgid "<i class=\"fa fa-tag\"></i> %1$s"
-msgstr ""
-
-#: inc/theme-updater-config.php:41
-msgid "Theme License Options"
-msgstr ""
-
-#: inc/theme-updater-config.php:50
-msgid "License Key"
-msgstr ""
-
-#: inc/theme-updater-config.php:54
-msgid "Enter your license key"
-msgstr ""
-
-#: inc/theme-updater-config.php:60 inc/theme-updater-config.php:70
-msgid "Activate License"
-msgstr ""
-
-#: inc/theme-updater-config.php:64
-msgid "active"
-msgstr ""
-
-#: inc/theme-updater-config.php:66
-msgid "Deactivate License"
-msgstr ""
-
-#: inc/theme-updater.php:57
-msgid ""
-"Updating this theme will lose any customizations you have made. 'Cancel' to "
-"stop, 'OK' to update."
 msgstr ""
 
 #: no-results.php:14
