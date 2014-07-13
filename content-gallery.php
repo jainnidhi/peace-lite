@@ -21,14 +21,17 @@
                                 <a href="<?php the_permalink(); ?>" title="<?php echo esc_attr(get_the_title()); ?>" rel="bookmark"><?php the_title(); ?></a>
                         </h2>
                         <?php } ?>
-                        <p class="header-meta">
-                            <span>Posted By </span><?php the_author_posts_link(); ?>
+                        <div class="header-meta">
+                        <p>
+                            <span>Posted by <?php the_author_posts_link(); ?> &middot; </span>
+                        
+                            <span class="post-category">
+                            <?php  $categories_list = get_the_category_list( esc_html__( ' &middot; ' ) ); 
+                            echo  $categories_list;
+                            ?>    
+                            </span>
                         </p>
-                        <p class="post-category">
-                            <?php  $categories_list = get_the_category_list( esc_html__( 'ID' ) ); 
-                            echo $categories_list;
-                            ?>
-                        </p>
+                        </div>
                 </div>
                 
                 <div class="post-type post-type-standard">
