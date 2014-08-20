@@ -352,7 +352,8 @@ function peace_link_to_menu_editor( $args )
 }
 
 
-class Menu_With_Description extends Walker_Nav_Menu {
+
+class Peace_Menu_With_Description extends Walker_Nav_Menu {
 	function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0) {
 		global $wp_query;
 		$indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
